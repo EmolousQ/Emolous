@@ -1,0 +1,59 @@
+package menumetodos;
+import java.util.Scanner;
+public class Menumetodos
+{
+
+    public static void main(String[] args)
+    {
+        Scanner x= new Scanner (System.in);
+        int opc; 
+        do {      
+        System.out.println("1.- Numero del numero que ingrese \n 2.- Rango de numeros \n 3.- Exit");
+        opc=x.nextInt();
+        
+        switch(opc){
+            case 1: imprimirNumeros();
+                    break;
+            
+                    case 2 : rango();
+                    
+                        break;
+                     
+                    case 3 : 
+                        System.out.printf("Exit");
+                        break;
+                        
+                    default:System.out.println("opcion invalida");
+        }
+            
+        }while(opc !=3);
+    }
+    public static void imprimirNumeros()
+    {
+        int n,i;
+           Scanner x= new Scanner (System.in);
+           System.out.printf("Ingrese un numero ");
+        n=x.nextInt();
+        for(i=1;i<=n;i++)   
+        {
+            System.out.println("Su numero es "+1);
+        }
+        
+    }
+    public static void rango()
+    { int n,min,max;
+        Scanner x= new Scanner (System.in);
+        System.out.println("Ingrese el numero minimo ");
+        min=x.nextInt();
+        System.out.println("Ingrese el numero más grande");
+        max=x.nextInt();
+        System.out.println("Ingrese un numero ");
+        n=x.nextInt();
+        while(n<min || n>max)
+        {
+            System.out.printf("Ingrese otro numero");
+        n=x.nextInt();
+        }
+    }
+    
+}
